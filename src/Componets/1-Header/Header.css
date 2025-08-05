@@ -1,0 +1,170 @@
+@keyframes zoom {
+  0% {
+    scale: 0;
+  }
+
+  60% {
+    scale: 1.3;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+/*=============== start header================  */
+header {
+  padding: 0 35px;
+  margin-top: 15px;
+  margin-bottom: 70px;
+  justify-content: space-between;
+
+  .menu {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 50%;
+    background-color: var(--border);
+    transition: all ease 0.2s;
+    color: white;
+    cursor: pointer;
+    display: none;
+
+    .menu-icon {
+      font-size: 22px;
+    }
+  }
+
+  nav {
+    margin: 0 auto;
+    background-color: var(--bgHeader);
+    padding: 15px 30px;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px #2323242a;
+    ul {
+      gap: 16px;
+      li {
+        a {
+          color: var(--title);
+          opacity: 0.9;
+          font-size: 15px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all ease 0.3s;
+
+          &:hover {
+            color: var(--blue);
+            opacity: 1;
+            font-size: 17px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .sun-btn,
+  .moon-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--border);
+    transition: all ease 0.2s;
+    color: white;
+    cursor: pointer;
+
+    &:hover{
+       color: var(--title);
+       border: 1px solid rgb(244, 165, 96);
+    }
+  }
+
+  .moon-btn{
+    &:hover .icon-moon-o{
+     
+    } 
+  }
+  .icon-moon-o{
+    font-size: 22px;
+  }
+  .sun-btn {
+    display: none;
+  }
+
+  /*=============== menu for small devices===================== */
+  .sm-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    background-color: rgba(40, 40, 48, 0.91);
+
+    ul.modal {
+      animation: zoom 1s 1;
+      width: 85%;
+      margin: 20px auto 0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      background-color: var(--secondary);
+
+      li {
+        border-bottom: 1px solid var(--border);
+        padding-top: 6px;
+        padding-bottom: 16px;
+
+        /*============= close icon=============== */
+        &:first-child {
+          text-align: right;
+
+          .close{
+              transition: 0.3s;
+            &:hover{
+              rotate: 180deg;
+            }
+          }
+
+          .icon-close {
+            color: var(--subtitle);
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover{
+              color: red;
+            }
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+
+        a {
+          transition: all ease 0.4s;
+          color: var(--title);
+          &:hover {
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+}
+/*============== end header=================== */
+
+@media (max-width: 870px) {
+  header {
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    nav {
+      display: none;
+    }
+  }
+}
