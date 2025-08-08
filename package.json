@@ -2,11 +2,14 @@
   "name": "package.json",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://abdelrahmann12.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
