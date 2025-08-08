@@ -28,9 +28,16 @@ footer.flex {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width:800px) {
   footer.flex {
+    text-align: center;
     flex-direction: column;
+    justify-content: center;
     gap: 32px;
+    
+
+    ul{
+      justify-content: center;
+    }
   }
 }

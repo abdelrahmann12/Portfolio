@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 function App() {
 useEffect(()=>{
   window.addEventListener("scroll" , ()=>{
-    console.log(window.scrollY);
     if(window.scrollY > 300){
       setShowBtn(true)
     }else

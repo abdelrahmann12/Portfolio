@@ -29,7 +29,7 @@ export default function Contact() {
               type="email"
               name="email"
               id="email"
-              placeholder="Email Adress"
+              
             />
             <ValidationError
               prefix="Email"
@@ -44,7 +44,6 @@ export default function Contact() {
               required
               name="message"
               id="message"
-              placeholder="Message"
             ></textarea>
             <ValidationError
               prefix="Message"

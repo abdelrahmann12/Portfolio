@@ -69,8 +69,8 @@ a{
 .divider {
   border-bottom: 1px solid var(--border);
   margin: 55px 0;
-  margin-left: -45px;
-  width: calc(100% + 90px);
+  margin-left: -40px;
+  width: calc(100% + 60px);
 }
 
 ::-webkit-scrollbar {
@@ -128,8 +128,19 @@ button:disabled{
 }
 
 
-@media (max-width: 600px) {
-  .container {
-    width: 98%;
+@media (max-width:1199px){
+  .container{
+    width: 95%;
+    padding: 0 40px;
   }
 }
+@media (max-width: 600px) {
+  .container {
+    width: 98% !important;
+    padding: 0 20px;
+  }
+}
+
+
+
+

@@ -46,7 +46,6 @@ section.main {
 =========================== */
   .right-main {
     display: flex;
-    border: 1px solid rgba(93, 188, 252, 0.3);
     flex-wrap: wrap;
     gap: 35px 16px;
     flex-grow: 1;
@@ -54,7 +53,7 @@ section.main {
     .card {
       border: 1px solid rgba(93, 188, 252, 0.3);
       background-color: var(--border);
-      width: 280px;
+      width: 260px;
       transition: all ease 0.3s;
       border-radius: 5px;
       background-image: linear-gradient(
@@ -127,3 +126,60 @@ section.main {
     }
   }
 }
+
+
+@media (max-width:1199px){
+  .main{
+    flex-direction: column;
+    .left-main{
+      .btns{
+        flex-wrap: wrap;
+        flex-direction: row !important;
+        gap: 8px !important;
+        justify-content: center ;
+      }
+    }
+
+
+    .right-main{
+      justify-content: center;
+
+      .card{
+        width: 48% !important;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 600px) {
+  
+  .main{
+    flex-direction: column;
+    .left-main{
+      .btns{
+        flex-wrap: wrap;
+        flex-direction: row !important;
+        gap: 8px !important;
+        justify-content: center ;
+
+        button{
+          width: 60px !important;
+          padding: 5px 22px !important;
+          font-size: 14px !important;
+        }
+      }
+    }
+
+
+    .right-main{
+      justify-content: center;
+
+      .card{
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+

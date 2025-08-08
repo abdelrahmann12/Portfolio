@@ -81,15 +81,22 @@
 @media (max-width:600px){
 
     .contact{
+        
         form{
             
             flex-direction: column;
             justify-content: center;
             
-            input , textarea{
-                width: 100%;
+            label{
+              margin-left: 15px;
+              margin-bottom: 10px;
             }
-
+            input , textarea{
+                width: 100% ;
+            }
+             button{
+              margin-left: 15px;
+             }
             .flex{
                 display: flex;
                 flex-direction: column;
